@@ -1,0 +1,78 @@
+﻿<Window x:Class="L5WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:L5WpfApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Margin="3" Padding="3">
+            <MenuItem Header="_Файл">
+                <MenuItem Header="_Открыть" Click="MenuItem_Click"/>
+                <MenuItem Header="_Сохранить" Click="MenuItem_Click_1"/>
+                <Separator/>
+                <MenuItem Header="_Закрыть" Click="MenuItem_Click_2"/>
+            </MenuItem>
+            <MenuItem Header="_Правка"/>
+            <MenuItem Header="_Справка"/>
+        </Menu>
+
+        <ToolBarTray Grid.Row="1">
+            <ToolBar Margin="5" Padding="5">
+                <Button Click="Button_Click_1">
+                    <Image Source="Data/pencil.png"/>
+                </Button>
+                <Separator/>
+                <Button Click="Button_Click_2" >
+                    <Image Source="Data/erase.png"/>
+                </Button>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <StackPanel VerticalAlignment="Center">
+                    <Label Content="Размер кисти:"/>
+                    <Slider Value="5" Minimum="1" Maximum="50" Width="100" ValueChanged="Slider_ValueChanged"/>
+                </StackPanel>
+            </ToolBar>
+            <ToolBar Margin="5" Padding="5">
+                <Border Background="AliceBlue">
+                    <UniformGrid Rows="2" Columns="12">
+                        <Button Background="White" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Red" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Orange" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Yellow" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="LightGreen" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Green" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Aquamarine" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="CornflowerBlue" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="DarkViolet" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Violet" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Pink" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="MistyRose" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Black" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="DarkRed" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Brown" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="DarkGoldenrod" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="LawnGreen" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="SeaGreen" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="SkyBlue" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Navy" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="BlueViolet" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Magenta" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Beige" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+                        <Button Background="Khaki" BorderBrush="Black" Margin="5" Height="16" Width="16" Click="Button_Click"/>
+
+                    </UniformGrid>
+                </Border>
+            </ToolBar>
+        </ToolBarTray>
+
+        <InkCanvas x:Name="inkCanas" Grid.Row="2"/>
+
+    </Grid>
+</Window>
